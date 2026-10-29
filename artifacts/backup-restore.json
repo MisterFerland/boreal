@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "elapsed_seconds": 1.426,
+  "financial_totals": [
+    {
+      "kind": "obligation",
+      "count": 132,
+      "total": "142169.51"
+    },
+    {
+      "kind": "reversal",
+      "count": 2,
+      "total": "5000.00"
+    },
+    {
+      "kind": "settlement",
+      "count": 7,
+      "total": "3055.54"
+    }
+  ],
+  "inputs_verified": 13,
+  "retained_builds": [
+    "03a9e2a4dafafc43d1a8"
+  ],
+  "replay_digest": "f0456c33c7daabcd292ae8a7ce29a36c07de0d74158f02bb09064fc48b214fcd",
+  "audit": {
+    "valid": true,
+    "count": 266,
+    "head": "f8a979fc90e07052067c342b190e7489d2e97b28f193eab72abd975118ce501d",
+    "limitation": "A privileged rewrite of the complete chain and its trusted anchor is outside this local model."
+  },
+  "backup": ".local/backups/boreal-backup.zip",
+  "database": "isolated temporary restore database, removed after verification"
+}

@@ -1,0 +1,998 @@
+{
+  "passed": true,
+  "elapsed_seconds": 32.612,
+  "workflow": [
+    {
+      "mode": "before_commit",
+      "batch_id": "e6390999-efed-4f12-a413-f010d26cc6f6",
+      "accepted": 6,
+      "rejected": 2,
+      "attempts": [
+        {
+          "error": "Claim expired; fenced by recovery",
+          "fence": 1,
+          "finished_at": "2026-10-29T10:30:58.274291-04:00",
+          "id": 35,
+          "job_id": "a134168d-99dd-4df0-be50-f64b58d82d3d",
+          "outcome": "abandoned",
+          "owner": "worker-25265-e88a6696",
+          "started_at": "2026-10-29T10:30:49.918351-04:00",
+          "attempt": 1,
+          "status": "abandoned"
+        },
+        {
+          "error": null,
+          "fence": 2,
+          "finished_at": "2026-10-29T10:30:58.382307-04:00",
+          "id": 36,
+          "job_id": "a134168d-99dd-4df0-be50-f64b58d82d3d",
+          "outcome": "succeeded",
+          "owner": "worker-25642-800dc454",
+          "started_at": "2026-10-29T10:30:58.274291-04:00",
+          "attempt": 2,
+          "status": "succeeded"
+        }
+      ],
+      "result_digest": "2194f2d57396cc2d213558ab59d4965e99cc15d257e5dac3434f15860ebc8188",
+      "replay": {
+        "delta": "0.00",
+        "difference_count": 0,
+        "differences": [],
+        "engine_build": "03a9e2a4dafafc43d1a8",
+        "original_digest": "2194f2d57396cc2d213558ab59d4965e99cc15d257e5dac3434f15860ebc8188",
+        "policy": "V1",
+        "replay_digest": "2194f2d57396cc2d213558ab59d4965e99cc15d257e5dac3434f15860ebc8188",
+        "same": true,
+        "side_effects": "No business or journal mutations; job and audit evidence only.",
+        "v1_total": "7592.62",
+        "v2_total": "7592.62",
+        "differences_url": "/api/jobs/918e000c-4366-4c34-b68e-080f6b6a2288/differences"
+      },
+      "comparison": {
+        "delta": "6.17",
+        "difference_count": 8,
+        "differences": [
+          {
+            "after": {
+              "beneficiary": "COMMUNITY-001",
+              "business_date": "20261029",
+              "eligible_cost": "123.45",
+              "payable": "98.76",
+              "position": 2,
+              "program": "CIR1",
+              "proposal": {
+                "amount": "98.76",
+                "credit": "2100",
+                "debit": "5100"
+              },
+              "raw_hex": "4456455249465930313032333036373931422d302020202020202020204349523132303236313032392b303030303132332e3435434f4d4d554e4954592d303031202020202020202020202020202020",
+              "reason": "ACCEPTED",
+              "reference": "02306791B-0",
+              "source": "VERIFY01",
+              "trace": {
+                "cap": "2500.00",
+                "engine_build": "03a9e2a4dafafc43d1a8",
+                "rate": "0.80",
+                "rounded": "98.76",
+                "rounding": "HALF_UP",
+                "rule_id": "CIR-V2",
+                "unrounded": "98.7600"
+              }
+            },
+            "before": {
+              "beneficiary": "COMMUNITY-001",
+              "business_date": "20261029",
+              "eligible_cost": "123.45",
+              "payable": "92.59",
+              "position": 2,
+              "program": "CIR1",
+              "proposal": {
+                "amount": "92.59",
+                "credit": "2100",
+                "debit": "5100"
+              },
+              "raw_hex": "4456455249465930313032333036373931422d302020202020202020204349523132303236313032392b303030303132332e3435434f4d4d554e4954592d303031202020202020202020202020202020",
+              "reason": "ACCEPTED",
+              "reference": "02306791B-0",
+              "source": "VERIFY01",
+              "trace": {
+                "cap": "2500.00",
+                "engine_build": "03a9e2a4dafafc43d1a8",
+                "rate": "0.75",
+                "rounded": "92.59",
+                "rounding": "HALF_UP",
+                "rule_id": "CIR-V1",
+                "unrounded": "92.5875"
+              }
+            },
+            "position": 2
+          },
+          {
+            "after": {
+              "beneficiary": "COMMUNITY-001",
+              "business_date": "20261029",
+              "eligible_cost": "0.02",
+              "payable": "0.02",
+              "position": 3,
+              "program": "CIR1",
+              "proposal": {
+                "amount": "0.02",
+                "credit": "2100",
+                "debit": "5100"
+              },
+              "raw_hex": "4456455249465930313032333036373931422d312020202020202020204349523132303236313032392b303030303030302e3032434f4d4d554e4954592d303031202020202020202020202020202020",
+              "reason": "ACCEPTED",
+              "reference": "02306791B-1",
+              "source": "VERIFY01",
+              "trace": {
+                "cap": "2500.00",
+                "engine_build": "03a9e2a4dafafc43d1a8",
+                "rate": "0.80",
+                "rounded": "0.02",
+                "rounding": "HALF_UP",
+                "rule_id": "CIR-V2",
+                "unrounded": "0.0160"
+              }
+            },
+            "before": {
+              "beneficiary": "COMMUNITY-001",
+              "business_date": "20261029",
+              "eligible_cost": "0.02",
+              "payable": "0.02",
+              "position": 3,
+              "program": "CIR1",
+              "proposal": {
+                "amount": "0.02",
+                "credit": "2100",
+                "debit": "5100"
+              },
+              "raw_hex": "4456455249465930313032333036373931422d312020202020202020204349523132303236313032392b303030303030302e3032434f4d4d554e4954592d303031202020202020202020202020202020",
+              "reason": "ACCEPTED",
+              "reference": "02306791B-1",
+              "source": "VERIFY01",
+              "trace": {
+                "cap": "2500.00",
+                "engine_build": "03a9e2a4dafafc43d1a8",
+                "rate": "0.75",
+                "rounded": "0.02",
+                "rounding": "HALF_UP",
+                "rule_id": "CIR-V1",
+                "unrounded": "0.0150"
+              }
+            },
+            "position": 3
+          },
+          {
+            "after": {
+              "beneficiary": "COMMUNITY-001",
+              "business_date": "20261029",
+              "eligible_cost": "4000.00",
+              "payable": "2500.00",
+              "position": 4,
+              "program": "CIR1",
+              "proposal": {
+                "amount": "2500.00",
+                "credit": "2100",
+                "debit": "5100"
+              },
+              "raw_hex": "4456455249465930313032333036373931422d322020202020202020204349523132303236313032392b303030343030302e3030434f4d4d554e4954592d303031202020202020202020202020202020",
+              "reason": "ACCEPTED",
+              "reference": "02306791B-2",
+              "source": "VERIFY01",
+              "trace": {
+                "cap": "2500.00",
+                "engine_build": "03a9e2a4dafafc43d1a8",
+                "rate": "0.80",
+                "rounded": "3200.00",
+                "rounding": "HALF_UP",
+                "rule_id": "CIR-V2",
+                "unrounded": "3200.0000"
+              }
+            },
+            "before": {
+              "beneficiary": "COMMUNITY-001",
+              "business_date": "20261029",
+              "eligible_cost": "4000.00",
+              "payable": "2500.00",
+              "position": 4,
+              "program": "CIR1",
+              "proposal": {
+                "amount": "2500.00",
+                "credit": "2100",
+                "debit": "5100"
+              },
+              "raw_hex": "4456455249465930313032333036373931422d322020202020202020204349523132303236313032392b303030343030302e3030434f4d4d554e4954592d303031202020202020202020202020202020",
+              "reason": "ACCEPTED",
+              "reference": "02306791B-2",
+              "source": "VERIFY01",
+              "trace": {
+                "cap": "2500.00",
+                "engine_build": "03a9e2a4dafafc43d1a8",
+                "rate": "0.75",
+                "rounded": "3000.00",
+                "rounding": "HALF_UP",
+                "rule_id": "CIR-V1",
+                "unrounded": "3000.0000"
+              }
+            },
+            "position": 4
+          },
+          {
+            "after": {
+              "beneficiary": "COMMUNITY-001",
+              "business_date": "20261029",
+              "eligible_cost": "0.01",
+              "payable": "0.01",
+              "position": 5,
+              "program": "CIR1",
+              "proposal": {
+                "amount": "0.01",
+                "credit": "2100",
+                "debit": "5100"
+              },
+              "raw_hex": "4456455249465930313032333036373931422d332020202020202020204349523132303236313032392b303030303030302e3031434f4d4d554e4954592d303031202020202020202020202020202020",
+              "reason": "ACCEPTED",
+              "reference": "02306791B-3",
+              "source": "VERIFY01",
+              "trace": {
+                "cap": "2500.00",
+                "engine_build": "03a9e2a4dafafc43d1a8",
+                "rate": "0.80",
+                "rounded": "0.01",
+                "rounding": "HALF_UP",
+                "rule_id": "CIR-V2",
+                "unrounded": "0.0080"
+              }
+            },
+            "before": {
+              "beneficiary": "COMMUNITY-001",
+              "business_date": "20261029",
+              "eligible_cost": "0.01",
+              "payable": "0.01",
+              "position": 5,
+              "program": "CIR1",
+              "proposal": {
+                "amount": "0.01",
+                "credit": "2100",
+                "debit": "5100"
+              },
+              "raw_hex": "4456455249465930313032333036373931422d332020202020202020204349523132303236313032392b303030303030302e3031434f4d4d554e4954592d303031202020202020202020202020202020",
+              "reason": "ACCEPTED",
+              "reference": "02306791B-3",
+              "source": "VERIFY01",
+              "trace": {
+                "cap": "2500.00",
+                "engine_build": "03a9e2a4dafafc43d1a8",
+                "rate": "0.75",
+                "rounded": "0.01",
+                "rounding": "HALF_UP",
+                "rule_id": "CIR-V1",
+                "unrounded": "0.0075"
+              }
+            },
+            "position": 5
+          },
+          {
+            "after": {
+              "beneficiary": "COMMUNITY-001",
+              "business_date": "20261029",
+              "eligible_cost": "3333.33",
+              "payable": "2500.00",
+              "position": 6,
+              "program": "CIR1",
+              "proposal": {
+                "amount": "2500.00",
+                "credit": "2100",
+                "debit": "5100"
+              },
+              "raw_hex": "4456455249465930313032333036373931422d342020202020202020204349523132303236313032392b303030333333332e3333434f4d4d554e4954592d303031202020202020202020202020202020",
+              "reason": "ACCEPTED",
+              "reference": "02306791B-4",
+              "source": "VERIFY01",
+              "trace": {
+                "cap": "2500.00",
+                "engine_build": "03a9e2a4dafafc43d1a8",
+                "rate": "0.80",
+                "rounded": "2666.66",
+                "rounding": "HALF_UP",
+                "rule_id": "CIR-V2",
+                "unrounded": "2666.6640"
+              }
+            },
+            "before": {
+              "beneficiary": "COMMUNITY-001",
+              "business_date": "20261029",
+              "eligible_cost": "3333.33",
+              "payable": "2500.00",
+              "position": 6,
+              "program": "CIR1",
+              "proposal": {
+                "amount": "2500.00",
+                "credit": "2100",
+                "debit": "5100"
+              },
+              "raw_hex": "4456455249465930313032333036373931422d342020202020202020204349523132303236313032392b303030333333332e3333434f4d4d554e4954592d303031202020202020202020202020202020",
+              "reason": "ACCEPTED",
+              "reference": "02306791B-4",
+              "source": "VERIFY01",
+              "trace": {
+                "cap": "2500.00",
+                "engine_build": "03a9e2a4dafafc43d1a8",
+                "rate": "0.75",
+                "rounded": "2500.00",
+                "rounding": "HALF_UP",
+                "rule_id": "CIR-V1",
+                "unrounded": "2499.9975"
+              }
+            },
+            "position": 6
+          },
+          {
+            "after": {
+              "beneficiary": "COMMUNITY-001",
+              "business_date": "20261029",
+              "eligible_cost": "3333.34",
+              "payable": "2500.00",
+              "position": 7,
+              "program": "CIR1",
+              "proposal": {
+                "amount": "2500.00",
+                "credit": "2100",
+                "debit": "5100"
+              },
+              "raw_hex": "4456455249465930313032333036373931422d352020202020202020204349523132303236313032392b303030333333332e3334434f4d4d554e4954592d303031202020202020202020202020202020",
+              "reason": "ACCEPTED",
+              "reference": "02306791B-5",
+              "source": "VERIFY01",
+              "trace": {
+                "cap": "2500.00",
+                "engine_build": "03a9e2a4dafafc43d1a8",
+                "rate": "0.80",
+                "rounded": "2666.67",
+                "rounding": "HALF_UP",
+                "rule_id": "CIR-V2",
+                "unrounded": "2666.6720"
+              }
+            },
+            "before": {
+              "beneficiary": "COMMUNITY-001",
+              "business_date": "20261029",
+              "eligible_cost": "3333.34",
+              "payable": "2500.00",
+              "position": 7,
+              "program": "CIR1",
+              "proposal": {
+                "amount": "2500.00",
+                "credit": "2100",
+                "debit": "5100"
+              },
+              "raw_hex": "4456455249465930313032333036373931422d352020202020202020204349523132303236313032392b303030333333332e3334434f4d4d554e4954592d303031202020202020202020202020202020",
+              "reason": "ACCEPTED",
+              "reference": "02306791B-5",
+              "source": "VERIFY01",
+              "trace": {
+                "cap": "2500.00",
+                "engine_build": "03a9e2a4dafafc43d1a8",
+                "rate": "0.75",
+                "rounded": "2500.01",
+                "rounding": "HALF_UP",
+                "rule_id": "CIR-V1",
+                "unrounded": "2500.0050"
+              }
+            },
+            "position": 7
+          },
+          {
+            "after": {
+              "beneficiary": "COMMUNITY-001",
+              "business_date": "20261029",
+              "eligible_cost": "0.00",
+              "payable": null,
+              "position": 8,
+              "program": "CIR1",
+              "proposal": null,
+              "raw_hex": "4456455249465930313032333036373931422d362020202020202020204349523132303236313032392b303030303030302e3030434f4d4d554e4954592d303031202020202020202020202020202020",
+              "reason": "COST_NOT_POSITIVE",
+              "reference": "02306791B-6",
+              "source": "VERIFY01",
+              "trace": {
+                "cap": "2500.00",
+                "engine_build": "03a9e2a4dafafc43d1a8",
+                "rate": null,
+                "rounded": null,
+                "rounding": "HALF_UP",
+                "rule_id": "CIR-V2",
+                "unrounded": null
+              }
+            },
+            "before": {
+              "beneficiary": "COMMUNITY-001",
+              "business_date": "20261029",
+              "eligible_cost": "0.00",
+              "payable": null,
+              "position": 8,
+              "program": "CIR1",
+              "proposal": null,
+              "raw_hex": "4456455249465930313032333036373931422d362020202020202020204349523132303236313032392b303030303030302e3030434f4d4d554e4954592d303031202020202020202020202020202020",
+              "reason": "COST_NOT_POSITIVE",
+              "reference": "02306791B-6",
+              "source": "VERIFY01",
+              "trace": {
+                "cap": "2500.00",
+                "engine_build": "03a9e2a4dafafc43d1a8",
+                "rate": null,
+                "rounded": null,
+                "rounding": "HALF_UP",
+                "rule_id": "CIR-V1",
+                "unrounded": null
+              }
+            },
+            "position": 8
+          },
+          {
+            "after": {
+              "beneficiary": "COMMUNITY-001",
+              "business_date": "20261029",
+              "eligible_cost": "-1.00",
+              "payable": null,
+              "position": 9,
+              "program": "CIR1",
+              "proposal": null,
+              "raw_hex": "4456455249465930313032333036373931422d372020202020202020204349523132303236313032392d303030303030312e3030434f4d4d554e4954592d303031202020202020202020202020202020",
+              "reason": "COST_NOT_POSITIVE",
+              "reference": "02306791B-7",
+              "source": "VERIFY01",
+              "trace": {
+                "cap": "2500.00",
+                "engine_build": "03a9e2a4dafafc43d1a8",
+                "rate": null,
+                "rounded": null,
+                "rounding": "HALF_UP",
+                "rule_id": "CIR-V2",
+                "unrounded": null
+              }
+            },
+            "before": {
+              "beneficiary": "COMMUNITY-001",
+              "business_date": "20261029",
+              "eligible_cost": "-1.00",
+              "payable": null,
+              "position": 9,
+              "program": "CIR1",
+              "proposal": null,
+              "raw_hex": "4456455249465930313032333036373931422d372020202020202020204349523132303236313032392d303030303030312e3030434f4d4d554e4954592d303031202020202020202020202020202020",
+              "reason": "COST_NOT_POSITIVE",
+              "reference": "02306791B-7",
+              "source": "VERIFY01",
+              "trace": {
+                "cap": "2500.00",
+                "engine_build": "03a9e2a4dafafc43d1a8",
+                "rate": null,
+                "rounded": null,
+                "rounding": "HALF_UP",
+                "rule_id": "CIR-V1",
+                "unrounded": null
+              }
+            },
+            "position": 9
+          }
+        ],
+        "engine_build": "03a9e2a4dafafc43d1a8",
+        "original_digest": "2194f2d57396cc2d213558ab59d4965e99cc15d257e5dac3434f15860ebc8188",
+        "policy": "V2",
+        "replay_digest": "b37696f43b9a59773986798b713b43935de2a751507335b1a2b092d8ba83b117",
+        "same": false,
+        "side_effects": "No business or journal mutations; job and audit evidence only.",
+        "v1_total": "7592.62",
+        "v2_total": "7598.79",
+        "differences_url": "/api/jobs/97014393-b7ac-4fb8-873b-7991b34e2971/differences"
+      },
+      "journals": 6
+    },
+    {
+      "mode": "after_commit",
+      "batch_id": "22a89b22-6c17-47b1-9636-8806114c6483",
+      "accepted": 6,
+      "rejected": 2,
+      "attempts": [
+        {
+          "error": "Claim expired; fenced by recovery",
+          "fence": 1,
+          "finished_at": "2026-10-29T10:31:13.244512-04:00",
+          "id": 40,
+          "job_id": "7d02b35a-6b1d-4526-b354-d70dc58422e4",
+          "outcome": "abandoned",
+          "owner": "worker-25642-800dc454",
+          "started_at": "2026-10-29T10:31:05.174258-04:00",
+          "attempt": 1,
+          "status": "abandoned"
+        },
+        {
+          "error": null,
+          "fence": 2,
+          "finished_at": "2026-10-29T10:31:13.294466-04:00",
+          "id": 41,
+          "job_id": "7d02b35a-6b1d-4526-b354-d70dc58422e4",
+          "outcome": "succeeded",
+          "owner": "worker-25829-e15f0ef5",
+          "started_at": "2026-10-29T10:31:13.244512-04:00",
+          "attempt": 2,
+          "status": "succeeded"
+        }
+      ],
+      "result_digest": "057264da37300a0bdbdbb0673ae04fdd27ada977ba92392e68b43e4050bed66e",
+      "replay": {
+        "delta": "0.00",
+        "difference_count": 0,
+        "differences": [],
+        "engine_build": "03a9e2a4dafafc43d1a8",
+        "original_digest": "057264da37300a0bdbdbb0673ae04fdd27ada977ba92392e68b43e4050bed66e",
+        "policy": "V1",
+        "replay_digest": "057264da37300a0bdbdbb0673ae04fdd27ada977ba92392e68b43e4050bed66e",
+        "same": true,
+        "side_effects": "No business or journal mutations; job and audit evidence only.",
+        "v1_total": "7592.62",
+        "v2_total": "7592.62",
+        "differences_url": "/api/jobs/014a93d2-d388-4f1d-929f-d2d26bc9ebaf/differences"
+      },
+      "comparison": {
+        "delta": "6.17",
+        "difference_count": 8,
+        "differences": [
+          {
+            "after": {
+              "beneficiary": "COMMUNITY-001",
+              "business_date": "20261029",
+              "eligible_cost": "123.45",
+              "payable": "98.76",
+              "position": 2,
+              "program": "CIR1",
+              "proposal": {
+                "amount": "98.76",
+                "credit": "2100",
+                "debit": "5100"
+              },
+              "raw_hex": "4456455249465930313032333036373931412d302020202020202020204349523132303236313032392b303030303132332e3435434f4d4d554e4954592d303031202020202020202020202020202020",
+              "reason": "ACCEPTED",
+              "reference": "02306791A-0",
+              "source": "VERIFY01",
+              "trace": {
+                "cap": "2500.00",
+                "engine_build": "03a9e2a4dafafc43d1a8",
+                "rate": "0.80",
+                "rounded": "98.76",
+                "rounding": "HALF_UP",
+                "rule_id": "CIR-V2",
+                "unrounded": "98.7600"
+              }
+            },
+            "before": {
+              "beneficiary": "COMMUNITY-001",
+              "business_date": "20261029",
+              "eligible_cost": "123.45",
+              "payable": "92.59",
+              "position": 2,
+              "program": "CIR1",
+              "proposal": {
+                "amount": "92.59",
+                "credit": "2100",
+                "debit": "5100"
+              },
+              "raw_hex": "4456455249465930313032333036373931412d302020202020202020204349523132303236313032392b303030303132332e3435434f4d4d554e4954592d303031202020202020202020202020202020",
+              "reason": "ACCEPTED",
+              "reference": "02306791A-0",
+              "source": "VERIFY01",
+              "trace": {
+                "cap": "2500.00",
+                "engine_build": "03a9e2a4dafafc43d1a8",
+                "rate": "0.75",
+                "rounded": "92.59",
+                "rounding": "HALF_UP",
+                "rule_id": "CIR-V1",
+                "unrounded": "92.5875"
+              }
+            },
+            "position": 2
+          },
+          {
+            "after": {
+              "beneficiary": "COMMUNITY-001",
+              "business_date": "20261029",
+              "eligible_cost": "0.02",
+              "payable": "0.02",
+              "position": 3,
+              "program": "CIR1",
+              "proposal": {
+                "amount": "0.02",
+                "credit": "2100",
+                "debit": "5100"
+              },
+              "raw_hex": "4456455249465930313032333036373931412d312020202020202020204349523132303236313032392b303030303030302e3032434f4d4d554e4954592d303031202020202020202020202020202020",
+              "reason": "ACCEPTED",
+              "reference": "02306791A-1",
+              "source": "VERIFY01",
+              "trace": {
+                "cap": "2500.00",
+                "engine_build": "03a9e2a4dafafc43d1a8",
+                "rate": "0.80",
+                "rounded": "0.02",
+                "rounding": "HALF_UP",
+                "rule_id": "CIR-V2",
+                "unrounded": "0.0160"
+              }
+            },
+            "before": {
+              "beneficiary": "COMMUNITY-001",
+              "business_date": "20261029",
+              "eligible_cost": "0.02",
+              "payable": "0.02",
+              "position": 3,
+              "program": "CIR1",
+              "proposal": {
+                "amount": "0.02",
+                "credit": "2100",
+                "debit": "5100"
+              },
+              "raw_hex": "4456455249465930313032333036373931412d312020202020202020204349523132303236313032392b303030303030302e3032434f4d4d554e4954592d303031202020202020202020202020202020",
+              "reason": "ACCEPTED",
+              "reference": "02306791A-1",
+              "source": "VERIFY01",
+              "trace": {
+                "cap": "2500.00",
+                "engine_build": "03a9e2a4dafafc43d1a8",
+                "rate": "0.75",
+                "rounded": "0.02",
+                "rounding": "HALF_UP",
+                "rule_id": "CIR-V1",
+                "unrounded": "0.0150"
+              }
+            },
+            "position": 3
+          },
+          {
+            "after": {
+              "beneficiary": "COMMUNITY-001",
+              "business_date": "20261029",
+              "eligible_cost": "4000.00",
+              "payable": "2500.00",
+              "position": 4,
+              "program": "CIR1",
+              "proposal": {
+                "amount": "2500.00",
+                "credit": "2100",
+                "debit": "5100"
+              },
+              "raw_hex": "4456455249465930313032333036373931412d322020202020202020204349523132303236313032392b303030343030302e3030434f4d4d554e4954592d303031202020202020202020202020202020",
+              "reason": "ACCEPTED",
+              "reference": "02306791A-2",
+              "source": "VERIFY01",
+              "trace": {
+                "cap": "2500.00",
+                "engine_build": "03a9e2a4dafafc43d1a8",
+                "rate": "0.80",
+                "rounded": "3200.00",
+                "rounding": "HALF_UP",
+                "rule_id": "CIR-V2",
+                "unrounded": "3200.0000"
+              }
+            },
+            "before": {
+              "beneficiary": "COMMUNITY-001",
+              "business_date": "20261029",
+              "eligible_cost": "4000.00",
+              "payable": "2500.00",
+              "position": 4,
+              "program": "CIR1",
+              "proposal": {
+                "amount": "2500.00",
+                "credit": "2100",
+                "debit": "5100"
+              },
+              "raw_hex": "4456455249465930313032333036373931412d322020202020202020204349523132303236313032392b303030343030302e3030434f4d4d554e4954592d303031202020202020202020202020202020",
+              "reason": "ACCEPTED",
+              "reference": "02306791A-2",
+              "source": "VERIFY01",
+              "trace": {
+                "cap": "2500.00",
+                "engine_build": "03a9e2a4dafafc43d1a8",
+                "rate": "0.75",
+                "rounded": "3000.00",
+                "rounding": "HALF_UP",
+                "rule_id": "CIR-V1",
+                "unrounded": "3000.0000"
+              }
+            },
+            "position": 4
+          },
+          {
+            "after": {
+              "beneficiary": "COMMUNITY-001",
+              "business_date": "20261029",
+              "eligible_cost": "0.01",
+              "payable": "0.01",
+              "position": 5,
+              "program": "CIR1",
+              "proposal": {
+                "amount": "0.01",
+                "credit": "2100",
+                "debit": "5100"
+              },
+              "raw_hex": "4456455249465930313032333036373931412d332020202020202020204349523132303236313032392b303030303030302e3031434f4d4d554e4954592d303031202020202020202020202020202020",
+              "reason": "ACCEPTED",
+              "reference": "02306791A-3",
+              "source": "VERIFY01",
+              "trace": {
+                "cap": "2500.00",
+                "engine_build": "03a9e2a4dafafc43d1a8",
+                "rate": "0.80",
+                "rounded": "0.01",
+                "rounding": "HALF_UP",
+                "rule_id": "CIR-V2",
+                "unrounded": "0.0080"
+              }
+            },
+            "before": {
+              "beneficiary": "COMMUNITY-001",
+              "business_date": "20261029",
+              "eligible_cost": "0.01",
+              "payable": "0.01",
+              "position": 5,
+              "program": "CIR1",
+              "proposal": {
+                "amount": "0.01",
+                "credit": "2100",
+                "debit": "5100"
+              },
+              "raw_hex": "4456455249465930313032333036373931412d332020202020202020204349523132303236313032392b303030303030302e3031434f4d4d554e4954592d303031202020202020202020202020202020",
+              "reason": "ACCEPTED",
+              "reference": "02306791A-3",
+              "source": "VERIFY01",
+              "trace": {
+                "cap": "2500.00",
+                "engine_build": "03a9e2a4dafafc43d1a8",
+                "rate": "0.75",
+                "rounded": "0.01",
+                "rounding": "HALF_UP",
+                "rule_id": "CIR-V1",
+                "unrounded": "0.0075"
+              }
+            },
+            "position": 5
+          },
+          {
+            "after": {
+              "beneficiary": "COMMUNITY-001",
+              "business_date": "20261029",
+              "eligible_cost": "3333.33",
+              "payable": "2500.00",
+              "position": 6,
+              "program": "CIR1",
+              "proposal": {
+                "amount": "2500.00",
+                "credit": "2100",
+                "debit": "5100"
+              },
+              "raw_hex": "4456455249465930313032333036373931412d342020202020202020204349523132303236313032392b303030333333332e3333434f4d4d554e4954592d303031202020202020202020202020202020",
+              "reason": "ACCEPTED",
+              "reference": "02306791A-4",
+              "source": "VERIFY01",
+              "trace": {
+                "cap": "2500.00",
+                "engine_build": "03a9e2a4dafafc43d1a8",
+                "rate": "0.80",
+                "rounded": "2666.66",
+                "rounding": "HALF_UP",
+                "rule_id": "CIR-V2",
+                "unrounded": "2666.6640"
+              }
+            },
+            "before": {
+              "beneficiary": "COMMUNITY-001",
+              "business_date": "20261029",
+              "eligible_cost": "3333.33",
+              "payable": "2500.00",
+              "position": 6,
+              "program": "CIR1",
+              "proposal": {
+                "amount": "2500.00",
+                "credit": "2100",
+                "debit": "5100"
+              },
+              "raw_hex": "4456455249465930313032333036373931412d342020202020202020204349523132303236313032392b303030333333332e3333434f4d4d554e4954592d303031202020202020202020202020202020",
+              "reason": "ACCEPTED",
+              "reference": "02306791A-4",
+              "source": "VERIFY01",
+              "trace": {
+                "cap": "2500.00",
+                "engine_build": "03a9e2a4dafafc43d1a8",
+                "rate": "0.75",
+                "rounded": "2500.00",
+                "rounding": "HALF_UP",
+                "rule_id": "CIR-V1",
+                "unrounded": "2499.9975"
+              }
+            },
+            "position": 6
+          },
+          {
+            "after": {
+              "beneficiary": "COMMUNITY-001",
+              "business_date": "20261029",
+              "eligible_cost": "3333.34",
+              "payable": "2500.00",
+              "position": 7,
+              "program": "CIR1",
+              "proposal": {
+                "amount": "2500.00",
+                "credit": "2100",
+                "debit": "5100"
+              },
+              "raw_hex": "4456455249465930313032333036373931412d352020202020202020204349523132303236313032392b303030333333332e3334434f4d4d554e4954592d303031202020202020202020202020202020",
+              "reason": "ACCEPTED",
+              "reference": "02306791A-5",
+              "source": "VERIFY01",
+              "trace": {
+                "cap": "2500.00",
+                "engine_build": "03a9e2a4dafafc43d1a8",
+                "rate": "0.80",
+                "rounded": "2666.67",
+                "rounding": "HALF_UP",
+                "rule_id": "CIR-V2",
+                "unrounded": "2666.6720"
+              }
+            },
+            "before": {
+              "beneficiary": "COMMUNITY-001",
+              "business_date": "20261029",
+              "eligible_cost": "3333.34",
+              "payable": "2500.00",
+              "position": 7,
+              "program": "CIR1",
+              "proposal": {
+                "amount": "2500.00",
+                "credit": "2100",
+                "debit": "5100"
+              },
+              "raw_hex": "4456455249465930313032333036373931412d352020202020202020204349523132303236313032392b303030333333332e3334434f4d4d554e4954592d303031202020202020202020202020202020",
+              "reason": "ACCEPTED",
+              "reference": "02306791A-5",
+              "source": "VERIFY01",
+              "trace": {
+                "cap": "2500.00",
+                "engine_build": "03a9e2a4dafafc43d1a8",
+                "rate": "0.75",
+                "rounded": "2500.01",
+                "rounding": "HALF_UP",
+                "rule_id": "CIR-V1",
+                "unrounded": "2500.0050"
+              }
+            },
+            "position": 7
+          },
+          {
+            "after": {
+              "beneficiary": "COMMUNITY-001",
+              "business_date": "20261029",
+              "eligible_cost": "0.00",
+              "payable": null,
+              "position": 8,
+              "program": "CIR1",
+              "proposal": null,
+              "raw_hex": "4456455249465930313032333036373931412d362020202020202020204349523132303236313032392b303030303030302e3030434f4d4d554e4954592d303031202020202020202020202020202020",
+              "reason": "COST_NOT_POSITIVE",
+              "reference": "02306791A-6",
+              "source": "VERIFY01",
+              "trace": {
+                "cap": "2500.00",
+                "engine_build": "03a9e2a4dafafc43d1a8",
+                "rate": null,
+                "rounded": null,
+                "rounding": "HALF_UP",
+                "rule_id": "CIR-V2",
+                "unrounded": null
+              }
+            },
+            "before": {
+              "beneficiary": "COMMUNITY-001",
+              "business_date": "20261029",
+              "eligible_cost": "0.00",
+              "payable": null,
+              "position": 8,
+              "program": "CIR1",
+              "proposal": null,
+              "raw_hex": "4456455249465930313032333036373931412d362020202020202020204349523132303236313032392b303030303030302e3030434f4d4d554e4954592d303031202020202020202020202020202020",
+              "reason": "COST_NOT_POSITIVE",
+              "reference": "02306791A-6",
+              "source": "VERIFY01",
+              "trace": {
+                "cap": "2500.00",
+                "engine_build": "03a9e2a4dafafc43d1a8",
+                "rate": null,
+                "rounded": null,
+                "rounding": "HALF_UP",
+                "rule_id": "CIR-V1",
+                "unrounded": null
+              }
+            },
+            "position": 8
+          },
+          {
+            "after": {
+              "beneficiary": "COMMUNITY-001",
+              "business_date": "20261029",
+              "eligible_cost": "-1.00",
+              "payable": null,
+              "position": 9,
+              "program": "CIR1",
+              "proposal": null,
+              "raw_hex": "4456455249465930313032333036373931412d372020202020202020204349523132303236313032392d303030303030312e3030434f4d4d554e4954592d303031202020202020202020202020202020",
+              "reason": "COST_NOT_POSITIVE",
+              "reference": "02306791A-7",
+              "source": "VERIFY01",
+              "trace": {
+                "cap": "2500.00",
+                "engine_build": "03a9e2a4dafafc43d1a8",
+                "rate": null,
+                "rounded": null,
+                "rounding": "HALF_UP",
+                "rule_id": "CIR-V2",
+                "unrounded": null
+              }
+            },
+            "before": {
+              "beneficiary": "COMMUNITY-001",
+              "business_date": "20261029",
+              "eligible_cost": "-1.00",
+              "payable": null,
+              "position": 9,
+              "program": "CIR1",
+              "proposal": null,
+              "raw_hex": "4456455249465930313032333036373931412d372020202020202020204349523132303236313032392d303030303030312e3030434f4d4d554e4954592d303031202020202020202020202020202020",
+              "reason": "COST_NOT_POSITIVE",
+              "reference": "02306791A-7",
+              "source": "VERIFY01",
+              "trace": {
+                "cap": "2500.00",
+                "engine_build": "03a9e2a4dafafc43d1a8",
+                "rate": null,
+                "rounded": null,
+                "rounding": "HALF_UP",
+                "rule_id": "CIR-V1",
+                "unrounded": null
+              }
+            },
+            "position": 9
+          }
+        ],
+        "engine_build": "03a9e2a4dafafc43d1a8",
+        "original_digest": "057264da37300a0bdbdbb0673ae04fdd27ada977ba92392e68b43e4050bed66e",
+        "policy": "V2",
+        "replay_digest": "b1ce3b2687f96275c001721e990c28de8aa8fff70f85f7b06cca08a3fde5e422",
+        "same": false,
+        "side_effects": "No business or journal mutations; job and audit evidence only.",
+        "v1_total": "7592.62",
+        "v2_total": "7598.79",
+        "differences_url": "/api/jobs/21000076-6fc8-4041-b805-df8a28e27c6c/differences"
+      },
+      "journals": 6
+    }
+  ],
+  "evidence": {
+    "valid": true,
+    "files": 82,
+    "journals": 8,
+    "audit_events": 233,
+    "financial_result_digest": "057264da37300a0bdbdbb0673ae04fdd27ada977ba92392e68b43e4050bed66e",
+    "head": "af68cfc6d7c1f7e87375475c1d514e10c48240eaf8eb66ddd6b6721bb7d340e0",
+    "limitation": "Detects changes relative to this manifest and chain anchor; cannot defeat a privileged rewrite of both."
+  },
+  "settlement": {
+    "exact_match_settled": true,
+    "one_cent_mismatch_retained": true,
+    "reversal_verified": true
+  },
+  "authorization": {
+    "operator_approval_denied": true,
+    "operator_export_denied": true
+  }
+}

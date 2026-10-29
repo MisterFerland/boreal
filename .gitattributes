@@ -1,0 +1,11 @@
+* text=auto eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+# Build identifiers hash exact source bytes. Preserve their recorded encoding/newlines.
+*.cob -text whitespace=cr-at-eol
+*.cpy -text whitespace=cr-at-eol
+*.sql text eol=lf
+*.dat -text whitespace=-blank-at-eol
+*.bin -text
+*.asc -text
+*.csv text eol=lf

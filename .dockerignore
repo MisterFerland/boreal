@@ -1,0 +1,11 @@
+.git
+.env
+.local
+.venv
+**/__pycache__
+frontend/node_modules
+frontend/dist
+engine/builds
+artifacts/screenshots
+artifacts/*.zip
+test-results

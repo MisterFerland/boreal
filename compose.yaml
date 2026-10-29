@@ -1,0 +1,60 @@
+name: boreal
+x-runtime: &runtime
+  image: boreal-local:1
+  build: .
+  environment: &runtime-env
+    BOREAL_DATABASE_URL: postgresql://boreal_app:${BOREAL_RUNTIME_PASSWORD:?run bootstrap}@db:5432/boreal
+    BOREAL_ORIGIN: ${BOREAL_ORIGIN:-http://127.0.0.1:8000}
+    BOREAL_COOKIE_SECURE: '0'
+    BOREAL_DEMO: ${BOREAL_DEMO:-0}
+  volumes:
+    - local-state:/app/.local
+  init: true
+  security_opt: [no-new-privileges:true]
+  cap_drop: [ALL]
+services:
+  db:
+    image: postgres:17.11-bookworm@sha256:839fbb5a4942a7758dd93e18b42ea5649807491a0545b5eeeb8f0b8bb11857a5
+    environment:
+      POSTGRES_DB: boreal
+      POSTGRES_USER: boreal_admin
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?run bootstrap}
+      BOREAL_RUNTIME_PASSWORD: ${BOREAL_RUNTIME_PASSWORD:?run bootstrap}
+      BOREAL_MIGRATION_PASSWORD: ${BOREAL_MIGRATION_PASSWORD:?run bootstrap}
+    volumes:
+      - database:/var/lib/postgresql/data
+      - ./scripts/init-db.sh:/docker-entrypoint-initdb.d/01-boreal.sh:ro
+    healthcheck:
+      test: [CMD-SHELL, pg_isready -U boreal_admin -d boreal]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+  migrate:
+    <<: *runtime
+    environment:
+      <<: *runtime-env
+      BOREAL_MIGRATION_URL: postgresql://boreal_migration:${BOREAL_MIGRATION_PASSWORD}@db:5432/boreal
+    command: [sh, -c, 'python -m boreal.manage migrate && python -m boreal.manage bootstrap --output .local/accounts.json']
+    depends_on:
+      db: {condition: service_healthy}
+    restart: 'no'
+  api:
+    <<: *runtime
+    ports: ['127.0.0.1:8000:8000']
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/health/live')"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+    restart: unless-stopped
+  worker:
+    <<: *runtime
+    command: [python, -m, boreal.worker]
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+    restart: unless-stopped
+volumes:
+  database:
+  local-state:

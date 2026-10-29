@@ -1,0 +1,115 @@
+{
+  "scope": "Native COBOL envelope, bounded batch and aggregate subprocess time; no database or HTTP",
+  "measurement": "perf_counter around subprocess.run; includes process startup and native file I/O; excludes fixture generation, transport preparation and output parsing",
+  "engine": {
+    "engine_build": "03a9e2a4dafafc43d1a8",
+    "compiler": "cobc (GnuCOBOL) 3.2.0",
+    "compiler_detail": "cobc (GnuCOBOL) 3.2.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\nWritten by Keisuke Nishida, Roger While, Ron Norman, Simon Sobisch, Edward Hart\nBuilt     Oct 29 2026 09:21:55\nPackaged  Jul 28 2023 17:02:56 UTC\nC version \"10.2.1 20210110\"",
+    "source_hash": "5057f26dab4a65ab1478d752960f8b61bce2cbdd5c72e192ec864a51e5bd9e4e",
+    "executable_hash": "85bd428aaf8cfa2523aae027b8411b0a827c806083436d40671697d04fd00318",
+    "executables": {
+      "batch": "85bd428aaf8cfa2523aae027b8411b0a827c806083436d40671697d04fd00318",
+      "envelope": "cb66192570463ca5a2866e6bdd943ea5cd8928294871b7d5f5aea53a773cceaa",
+      "reconcile": "b54a61401cb7516cb4aab7636588a315b0b2c4d38b504730ed3259c46aba4b73",
+      "packed": "1dff46bdd7023de53f41b31b958c5e4c235bcad102a079609dd30c4bcf6de46b",
+      "aggregate": "d3e8a850e3006552e509d924e92c82c31310acd9775e73a8f94509bb096e7a51",
+      "reverse": "aa9d6d5e6b700f9c423adc72c61b2e91e3cbee06b6a7d1254320a167d088c05d"
+    },
+    "flags": [
+      "-free",
+      "-Wall",
+      "-Wextra",
+      "-debug"
+    ],
+    "protocol": "BOREAL01",
+    "available": true
+  },
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.31",
+  "machine": "x86_64",
+  "cpu_count_visible": 8,
+  "python": "3.12.12",
+  "cpu_model": "Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz",
+  "memory_total_kib": "8022232 kB",
+  "container_allocation": "WSL2 local runtime; host allocation not controlled",
+  "warmups": 1,
+  "repetitions": 3,
+  "datasets": [
+    {
+      "count": 10000,
+      "seed": 20261029,
+      "sha256": "9bc0b0a7f45cfedf496ae28048502aba0ada299e69c808780f6996c3e4f64688",
+      "control_total": "29977443.00",
+      "path": "benchmark-10000.dat",
+      "bytes": 810162,
+      "runs": [
+        {
+          "seconds": 0.22673950400007925,
+          "records_per_second": 44103.474796330614,
+          "accepted": 10000,
+          "rejected": 0,
+          "total": "+0000018035688.85"
+        },
+        {
+          "seconds": 0.270906403999561,
+          "records_per_second": 36913.117786673676,
+          "accepted": 10000,
+          "rejected": 0,
+          "total": "+0000018035688.85"
+        },
+        {
+          "seconds": 0.24599910400002045,
+          "records_per_second": 40650.55456461813,
+          "accepted": 10000,
+          "rejected": 0,
+          "total": "+0000018035688.85"
+        }
+      ],
+      "median_seconds": 0.24599910400002045,
+      "median_records_per_second": 40650.55456461813,
+      "bridge_inclusive_seconds_one_run": 4.638184473000138,
+      "bridge_inclusive_records_per_second": 2156.0160140701896,
+      "financial_result_sha256": "5038feefd246ba0cd20e0a13f1f816a90e2d1fad44198975fc7fa6f4d1f5720f"
+    },
+    {
+      "count": 100000,
+      "seed": 20261029,
+      "sha256": "d120eb06a180f45203b24f49e9214413135a584e6070409dc1fb8bf180df23f6",
+      "control_total": "300579826.51",
+      "path": "benchmark-100000.dat",
+      "bytes": 8100162,
+      "runs": [
+        {
+          "seconds": 2.3885931350005194,
+          "records_per_second": 41865.64824903855,
+          "accepted": 100000,
+          "rejected": 0,
+          "total": "+0000180685086.60"
+        },
+        {
+          "seconds": 2.2601390360016467,
+          "records_per_second": 44245.06563848718,
+          "accepted": 100000,
+          "rejected": 0,
+          "total": "+0000180685086.60"
+        },
+        {
+          "seconds": 2.3158301540011053,
+          "records_per_second": 43181.05964171338,
+          "accepted": 100000,
+          "rejected": 0,
+          "total": "+0000180685086.60"
+        }
+      ],
+      "median_seconds": 2.3158301540011053,
+      "median_records_per_second": 43181.05964171338,
+      "bridge_inclusive_seconds_one_run": 35.284129893,
+      "bridge_inclusive_records_per_second": 2834.1353549953615,
+      "financial_result_sha256": "3ed6bef475b6b8f9766b183b4d1f64e9c612b86e82e31feee5b95ebcb7639c04"
+    }
+  ],
+  "process_peak_rss_kib": 389724,
+  "spawned_process_peak_rss_kib": 274568,
+  "memory_observation_limit": "ru_maxrss is process-wide high-water data. Child observation includes fork/exec and Python supervision, not isolated native engine memory. Python materializes the complete bounded-upload result list and report JSON; only native calculation calls are chunk-bounded. No constant-memory end-to-end claim is made.",
+  "latency_percentiles": "Not measured; batch throughput only",
+  "end_to_end_database_api": "Separate integration benchmark required; not represented by these numbers"
+}

@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "locale": "fr-CA",
+  "theme": "dark",
+  "batch_id": "2647bda8-3cfc-4562-a2c4-82b1cb63b0ec",
+  "fixture": "browser-MVTN6V9U.dat",
+  "checks": [
+    {
+      "label": "trace-calculation-fr-CA-dark",
+      "violations": []
+    },
+    {
+      "label": "trace-bytes-en-CA-dark",
+      "violations": []
+    },
+    {
+      "label": "posted-batch-compare-fr-CA-dark",
+      "violations": []
+    },
+    {
+      "label": "reconciliation-fr-CA-dark",
+      "violations": []
+    },
+    {
+      "label": "workbench-packed-fr-CA-dark",
+      "violations": []
+    },
+    {
+      "label": "workbench-fr-CA-light",
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "steps": [
+    "UI upload + unsaved language preservation",
+    "trace123.45=>92.59",
+    "hex inspector + language preservation",
+    "separate approver",
+    "actual post-commit process interruption + recovery",
+    "historical replay",
+    "V1/V2 comparison",
+    "settlement import",
+    "exact match acceptance + mismatch disposition",
+    "auditor ZIP download",
+    "malformed packed-decimal inspection"
+  ]
+}

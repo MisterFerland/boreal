@@ -1,0 +1,23 @@
+{
+  "engine_build": "03a9e2a4dafafc43d1a8",
+  "compiler": "cobc (GnuCOBOL) 3.2.0",
+  "compiler_detail": "cobc (GnuCOBOL) 3.2.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\nWritten by Keisuke Nishida, Roger While, Ron Norman, Simon Sobisch, Edward Hart\nBuilt     Oct 29 2026 09:21:55\nPackaged  Jul 28 2023 17:02:56 UTC\nC version \"10.2.1 20210110\"",
+  "source_hash": "5057f26dab4a65ab1478d752960f8b61bce2cbdd5c72e192ec864a51e5bd9e4e",
+  "executable_hash": "85bd428aaf8cfa2523aae027b8411b0a827c806083436d40671697d04fd00318",
+  "executables": {
+    "batch": "85bd428aaf8cfa2523aae027b8411b0a827c806083436d40671697d04fd00318",
+    "envelope": "cb66192570463ca5a2866e6bdd943ea5cd8928294871b7d5f5aea53a773cceaa",
+    "reconcile": "b54a61401cb7516cb4aab7636588a315b0b2c4d38b504730ed3259c46aba4b73",
+    "packed": "1dff46bdd7023de53f41b31b958c5e4c235bcad102a079609dd30c4bcf6de46b",
+    "aggregate": "d3e8a850e3006552e509d924e92c82c31310acd9775e73a8f94509bb096e7a51",
+    "reverse": "aa9d6d5e6b700f9c423adc72c61b2e91e3cbee06b6a7d1254320a167d088c05d"
+  },
+  "flags": [
+    "-free",
+    "-Wall",
+    "-Wextra",
+    "-debug"
+  ],
+  "protocol": "BOREAL01",
+  "available": true
+}

@@ -1,0 +1,72 @@
+{
+  "target": "WCAG 2.2 AA",
+  "checks": [
+    {
+      "locale": "en-CA",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "locale": "en-CA",
+      "theme": "light",
+      "width": 1280,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "locale": "en-CA",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "locale": "en-CA",
+      "theme": "dark",
+      "width": 1280,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "locale": "fr-CA",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "locale": "fr-CA",
+      "theme": "light",
+      "width": 1280,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "locale": "fr-CA",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "locale": "fr-CA",
+      "theme": "dark",
+      "width": 1280,
+      "overflow": false,
+      "violations": []
+    }
+  ],
+  "keyboard": {
+    "commandPalette": true,
+    "escapeCloses": true,
+    "focus": {
+      "tag": "BUTTON",
+      "name": "Se déconnecter"
+    }
+  },
+  "errors": [],
+  "screenReader": "UNVERIFIED: no manual screen-reader assessment performed",
+  "scope": "Automated axe scans and scripted keyboard checks, not comprehensive conformance."
+}

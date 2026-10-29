@@ -1,0 +1,8 @@
+{
+  "scope": "Initial complete HTTP-to-ledger performance investigation",
+  "dataset_seed": 20261029,
+  "ten_thousand": {"records":10000,"accepted":9900,"rejected":100,"calculation_seconds":17.138391,"elapsed_seconds":47.564626,"records_per_second":210.24},
+  "hundred_thousand": {"records":100000,"outcome":"posting did not finish within 600-second wait; disposable benchmark database removed by cleanup","completed":false},
+  "observations": ["A host wall-clock jump expired a lease during the 10000-record calculation; fenced recovery succeeded.","Posting used per-record synchronous INSERT/UPDATE calls; database journal lookup indexing and bounded batching were investigated after this measured failure."],
+  "claim": "This failed run is not a completed 100000-record throughput result."
+}

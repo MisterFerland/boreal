@@ -1,0 +1,30 @@
+{
+  "zip": "artifacts/final-evidence.zip",
+  "verification": {
+    "valid": true,
+    "files": 83,
+    "journals": 4,
+    "audit_events": 271,
+    "financial_result_digest": "ad5d9b5bc0096a70fae95833b2ab5fd994c9aaccb8d200004eaa7f66764cf714",
+    "head": "733f678ee498b7e7178b6da0d5f90646bff20b8f3413b0fffb45bcb81c30375f",
+    "limitation": "Detects changes relative to this manifest and chain anchor; cannot defeat a privileged rewrite of both."
+  },
+  "standalone_replay": {
+    "verified": true,
+    "engine_build": "03a9e2a4dafafc43d1a8",
+    "policy": "V1",
+    "records": 4,
+    "payable_total": "2592.61",
+    "original_digest": "ad5d9b5bc0096a70fae95833b2ab5fd994c9aaccb8d200004eaa7f66764cf714",
+    "replay_digest": "ad5d9b5bc0096a70fae95833b2ab5fd994c9aaccb8d200004eaa7f66764cf714",
+    "differences": [],
+    "side_effects": "No database, approval or journal writes."
+  },
+  "health": {
+    "engine": "ready",
+    "worker": "online",
+    "engine_build": "03a9e2a4dafafc43d1a8",
+    "compiler": "cobc (GnuCOBOL) 3.2.0",
+    "demo": true
+  }
+}

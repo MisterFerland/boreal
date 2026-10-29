@@ -1,0 +1,129 @@
+{
+  "results": [
+    {
+      "locale": "en",
+      "theme": "light",
+      "nav": "Batches",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "nav": "Reconciliation",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "nav": "Ledger",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "nav": "Workbench",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "nav": "Batches",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "nav": "Reconciliation",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "nav": "Ledger",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "nav": "Workbench",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "locale": "fr",
+      "theme": "light",
+      "nav": "Lots",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "locale": "fr",
+      "theme": "light",
+      "nav": "Rapprochement",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "locale": "fr",
+      "theme": "light",
+      "nav": "Grand livre",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "locale": "fr",
+      "theme": "light",
+      "nav": "Atelier",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "locale": "fr",
+      "theme": "dark",
+      "nav": "Lots",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "locale": "fr",
+      "theme": "dark",
+      "nav": "Rapprochement",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "locale": "fr",
+      "theme": "dark",
+      "nav": "Grand livre",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "locale": "fr",
+      "theme": "dark",
+      "nav": "Atelier",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "dialog": "Calculation",
+      "violations": []
+    },
+    {
+      "dialog": "Source bytes",
+      "violations": []
+    },
+    {
+      "dialog": "Ledger & attempts",
+      "violations": []
+    }
+  ],
+  "errors": []
+}

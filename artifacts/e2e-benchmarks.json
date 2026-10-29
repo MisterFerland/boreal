@@ -1,0 +1,47 @@
+{
+  "scope": "Real loopback HTTP import, durable COBOL calculation, separate authenticated approval, chunk posting and PostgreSQL commit; polling included.",
+  "warmup": "100 rows, same complete flow",
+  "repetitions": 1,
+  "workers": 1,
+  "posting_chunk": 500,
+  "hardware": {
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.31",
+    "logical_cpus": 8,
+    "memory": [
+      "MemTotal:        8022232 kB",
+      "MemFree:         6172176 kB",
+      "MemAvailable:    6972992 kB"
+    ]
+  },
+  "database": "PostgreSQL 17.11 isolated database, default128MiB shared_buffers",
+  "python": "3.12.12 (main, Oct 28 2025, 12:10:49) [Clang 20.1.4 ]",
+  "memory_peak": "Unavailable for full process tree; no memory claim inferred.",
+  "results": [
+    {
+      "records": 10000,
+      "seed": 20261029,
+      "sha256": "77b437b3ceb4027867e1b1e98d13d4367d16815ef04615a0ca8d7ce6e9157b75",
+      "bytes": 810162,
+      "accepted": 9900,
+      "rejected": 100,
+      "calculation_seconds": 8.375214,
+      "elapsed_seconds": 15.194139,
+      "records_per_second": 658.15,
+      "journals": 9900,
+      "posted_amount": "19299882.88"
+    },
+    {
+      "records": 100000,
+      "seed": 20261029,
+      "sha256": "dc48fbabc4a6f0c7b8f1e64873db6091427b78519f0c20e11a376469038177cb",
+      "bytes": 8100162,
+      "accepted": 99000,
+      "rejected": 1000,
+      "calculation_seconds": 79.10199,
+      "elapsed_seconds": 130.234947,
+      "records_per_second": 767.84,
+      "journals": 99000,
+      "posted_amount": "192678807.00"
+    }
+  ]
+}

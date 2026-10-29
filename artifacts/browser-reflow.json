@@ -1,0 +1,38 @@
+{
+  "checks": [
+    {
+      "width": 640,
+      "overflow": false,
+      "oversized": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "oversized": [],
+      "violations": []
+    },
+    {
+      "width": 320,
+      "overflow": false,
+      "oversized": [],
+      "violations": []
+    }
+  ],
+  "traceViolations": [],
+  "keyboardArrowHomeEnd": true,
+  "dialogFocusRestored": true,
+  "errors": [],
+  "browserZoomAttempt": {
+    "before": {
+      "width": 1280,
+      "ratio": 1
+    },
+    "after": {
+      "width": 1280,
+      "ratio": 1
+    },
+    "changed": false
+  },
+  "zoomScope": "320/390/640 CSS-pixel viewport reflow verified. Manual browser zoom and screen-reader assessment remain unverified. Exploratory CSS body.zoom=2 overflowed; CSS zoom does not adjust media-query viewport and is not used as evidence for browser zoom."
+}

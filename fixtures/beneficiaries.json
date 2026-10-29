@@ -1,0 +1,50 @@
+{
+  "COMMUNITY-000": {
+    "en-CA": "North Shore",
+    "fr-CA": "Côte-Nord"
+  },
+  "COMMUNITY-001": {
+    "en-CA": "Riverbend",
+    "fr-CA": "Méandre"
+  },
+  "COMMUNITY-002": {
+    "en-CA": "Cedar Valley",
+    "fr-CA": "Vallée des Cèdres"
+  },
+  "COMMUNITY-003": {
+    "en-CA": "Lakeview",
+    "fr-CA": "Vue-du-Lac"
+  },
+  "COMMUNITY-004": {
+    "en-CA": "Northern Lights",
+    "fr-CA": "Aurore boréale"
+  },
+  "COMMUNITY-005": {
+    "en-CA": "Maple Ridge",
+    "fr-CA": "Crête des Érables"
+  },
+  "COMMUNITY-006": {
+    "en-CA": "Harbour Point",
+    "fr-CA": "Pointe-du-Port"
+  },
+  "COMMUNITY-007": {
+    "en-CA": "Willow Creek",
+    "fr-CA": "Ruisseau des Saules"
+  },
+  "COMMUNITY-008": {
+    "en-CA": "Clearwater",
+    "fr-CA": "Eau-Claire"
+  },
+  "COMMUNITY-009": {
+    "en-CA": "Pine Crossing",
+    "fr-CA": "Traverse des Pins"
+  },
+  "COMMUNITY-010": {
+    "en-CA": "Meadow Brook",
+    "fr-CA": "Ruisseau des Prés"
+  },
+  "COMMUNITY-011": {
+    "en-CA": "Sunrise",
+    "fr-CA": "Aube"
+  }
+}

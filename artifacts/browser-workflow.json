@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "batch_id": "83d27102-8443-428a-ac13-44c301969c5a",
+  "fixture": "browser-MVTMUEB8.dat",
+  "checks": [
+    {
+      "label": "trace-calculation-en-light",
+      "violations": []
+    },
+    {
+      "label": "trace-bytes-fr-light",
+      "violations": []
+    },
+    {
+      "label": "posted-batch-compare-en-light",
+      "violations": []
+    },
+    {
+      "label": "reconciliation-en-light",
+      "violations": []
+    },
+    {
+      "label": "workbench-packed-en-light",
+      "violations": []
+    },
+    {
+      "label": "workbench-en-dark",
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "steps": [
+    "UI upload + unsaved language preservation",
+    "trace123.45=>92.59",
+    "hex inspector + language preservation",
+    "separate approver",
+    "actual post-commit process interruption + recovery",
+    "historical replay",
+    "V1/V2 comparison",
+    "settlement import",
+    "exact match acceptance + mismatch disposition",
+    "auditor ZIP download",
+    "malformed packed-decimal inspection"
+  ]
+}

@@ -1,0 +1,81 @@
+name: Verify native financial workflow
+on: [push, pull_request]
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    services:
+      postgres:
+        image: postgres:17.11-bookworm@sha256:839fbb5a4942a7758dd93e18b42ea5649807491a0545b5eeeb8f0b8bb11857a5
+        env:
+          POSTGRES_USER: boreal_admin
+          POSTGRES_PASSWORD: ephemeral-ci-only
+          POSTGRES_DB: boreal
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd "pg_isready -U boreal_admin -d boreal"
+          --health-interval 5s --health-timeout 5s --health-retries 12
+    env:
+      PYTHONPATH: backend:.
+      BOREAL_TEST_ADMIN_URL: postgresql://boreal_admin:ephemeral-ci-only@127.0.0.1:5432/postgres
+      BOREAL_MIGRATION_URL: postgresql://boreal_migration:ephemeral-migration@127.0.0.1:5432/boreal
+      BOREAL_DATABASE_URL: postgresql://boreal_app:ephemeral-runtime@127.0.0.1:5432/boreal
+      BOREAL_ORIGIN: http://127.0.0.1:8000
+      BOREAL_DEMO: '1'
+      BOREAL_LEASE_SECONDS: '8'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12.12'}
+      - uses: actions/setup-node@v4
+        with: {node-version: '24.18.0', cache: npm, cache-dependency-path: frontend/package-lock.json}
+      - name: Compile GnuCOBOL 3.2
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gcc make libgmp-dev xz-utils
+          curl -fsSL https://ftp.gnu.org/gnu/gnucobol/gnucobol-3.2.tar.xz -o /tmp/gnucobol.tar.xz
+          echo '3bb48af46ced4779facf41fdc2ee60e4ccb86eaa99d010b36685315df39c2ee2  /tmp/gnucobol.tar.xz' | sha256sum -c -
+          tar -xf /tmp/gnucobol.tar.xz -C /tmp
+          cd /tmp/gnucobol-3.2
+          ./configure --without-db --without-curses
+          make -j2
+          sudo make install
+          sudo ldconfig
+      - name: Install pinned dependencies
+        run: |
+          pip install --require-hashes -r backend/requirements-dev.lock
+          npm ci --prefix frontend
+      - name: Build and verify native/database boundaries
+        run: |
+          python scripts/ci_database.py
+          python engine/build.py
+          python -m pytest -q --junitxml=artifacts/tests.xml
+          ruff check backend scripts engine tests
+          npm run build --prefix frontend
+      - name: Execute production browser workflow
+        run: |
+          python -m boreal.manage migrate
+          python -m boreal.manage bootstrap --output .local/accounts.json
+          env -u BOREAL_MIGRATION_URL python -m uvicorn boreal.api:app --host 127.0.0.1 --port 8000 > .local/api.log 2>&1 &
+          env -u BOREAL_MIGRATION_URL python scripts/supervise_worker.py > .local/worker.log 2>&1 &
+          python scripts/wait_ready.py
+          python scripts/seed.py
+          cd frontend
+          npx playwright install --with-deps chromium
+          cd ..
+          node tests/browser/inspect.mjs
+          node tests/browser/workflow.mjs
+          BOREAL_BROWSER_LOCALE=fr-CA BOREAL_BROWSER_THEME=dark node tests/browser/workflow.mjs
+          python scripts/verify_evidence.py artifacts/browser-evidence.zip
+          python engine/replay_evidence.py artifacts/browser-evidence.zip
+      - name: Dependency advisories
+        run: |
+          pip-audit
+          npm audit --prefix frontend --audit-level=moderate
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: executed-verification
+          path: |
+            artifacts/
+            engine/test-results.xml
+          retention-days: 14
