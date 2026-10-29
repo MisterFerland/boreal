@@ -1,10 +1,14 @@
 # BOREAL
 
+[![Verify native financial workflow](https://github.com/MisterFerland/boreal/actions/workflows/verify.yml/badge.svg)](https://github.com/MisterFerland/boreal/actions/workflows/verify.yml)
+
 **Native COBOL precision. A transparent financial operations workspace.**
 
 An independent portfolio demonstrator by Yves Ferland. All data, policy and settlements are fictional. No government affiliation, real benefits, citizen data or payment connectivity.
 
 BOREAL imports legacy records, calculates CAD reimbursements in compiled GnuCOBOL, freezes results for independent approval, posts balanced journals through a durable worker, recovers from real process interruptions, reconciles synthetic settlements and exports reproducible evidence. The React console supports English/French, light/dark themes and payment tracing down to the original bytes.
+
+![BOREAL operations overview with synthetic demonstration data](artifacts/screenshots/overview-en-CA-light-1440.png)
 
 ## Start locally
 
@@ -49,6 +53,8 @@ If npm is only installed on Windows, build there first: `cd frontend; npm ci; np
 ## Demonstrate and verify
 
 Follow [DEMO.md](DEMO.md) for the seven-minute walkthrough. [BUILD_STATE.md](BUILD_STATE.md) records completed work and unresolved verification limits.
+
+The [GitHub verification workflow](https://github.com/MisterFerland/boreal/actions/runs/40896864331) passed on a clean Ubuntu runner: 81 tests, production frontend build, English/light and French/dark browser workflows, evidence integrity and native replay, and dependency advisory scans. Application Docker Compose startup and manual assistive-technology checks remain unverified.
 
 ```sh
 # Direct native COBOL, without web services (PATH must contain cobc)
@@ -125,7 +131,7 @@ Each journal stores one positive exact amount shared by its debit/credit legs, m
 | `fixtures/` | Golden inputs, mixed binary examples, synthetic metadata and generators |
 | `scripts/` | Bootstrap, seed, verification, backup, performance and operations |
 | `tests/` | Independent financial oracle, actual database/process/browser tests |
-| `artifacts/` | Actually executed reports; screenshots are local generated artifacts |
+| `artifacts/` | Executed reports, verified evidence ZIP and captured application screenshots |
 
 Read [architecture and transaction boundaries](docs/ARCHITECTURE.md), [record specifications](docs/RECORDS.md), [security model](docs/SECURITY.md), [verification and accessibility](docs/VERIFICATION.md), [mainframe assessment](docs/MAINFRAME.md), and [French operational summary](docs/REPORT.fr-CA.md).
 

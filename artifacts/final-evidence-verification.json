@@ -4,9 +4,9 @@
     "valid": true,
     "files": 83,
     "journals": 4,
-    "audit_events": 271,
+    "audit_events": 273,
     "financial_result_digest": "ad5d9b5bc0096a70fae95833b2ab5fd994c9aaccb8d200004eaa7f66764cf714",
-    "head": "733f678ee498b7e7178b6da0d5f90646bff20b8f3413b0fffb45bcb81c30375f",
+    "head": "854737d33f465f36e5a5fbd123da19890c81b3eaacb928ee5dc36bca5a0fd8c5",
     "limitation": "Detects changes relative to this manifest and chain anchor; cannot defeat a privileged rewrite of both."
   },
   "standalone_replay": {

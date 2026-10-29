@@ -17,6 +17,7 @@ Implemented: native GnuCOBOL calculations/control totals/journals/reconciliation
 - Final evidence: 83 files, independent integrity and native standalone replay passed; artifacts/final-evidence-verification.json.
 - Ruff, compileall, TypeScript/Vite production build and Prettier passed. Python formatting preserved identical ASTs. Dependency scans reported zero known advisories.
 - **Verified launch command:** .\scripts\start.ps1 -Wsl. The API and supervised worker passed readiness checks at http://127.0.0.1:8000.
+- **GitHub Actions passed:** [public verification run](https://github.com/MisterFerland/boreal/actions/runs/40896864331) on Ubuntu 24.04, with 81 tests in 29.54 seconds, production frontend build, English/light and French/dark browser workflows, evidence verification/native replay and dependency scans.
 
 ## Measured performance
 
@@ -26,7 +27,7 @@ Native medians: 10,000 records in 0.246 seconds; 100,000 in 2.316 seconds. Super
 
 Windows host: Python 3.13.3, Node 24.18.0, npm 11.16.0, Git 2.54.0. WSL2 Debian: Python 3.12.12, source-built GnuCOBOL 3.2/GCC 10.2.1, PostgreSQL 17.11 in /opt/boreal-tools, isolated cluster /opt/boreal-data on loopback 55432. WSL package repositories returned missing/stale package errors; tools were compiled in an isolated prefix without upgrading the distribution.
 
-Docker is not installed: container build/start and GitHub Actions execution remain unverified. Docker image digests, configuration and archive lifecycle were inspected/tested separately. Manual screen-reader and actual browser-menu zoom assessments remain unverified. Narrowed CSS viewport reflow is verified; it is not presented as manual zoom evidence. Python result processing is bounded by the upload limit, not constant-memory streaming. Mainframe platforms were not executed.
+Docker is not installed on the local development machine: the application container build and Compose startup remain unverified. GitHub Actions passed using a PostgreSQL service container and native application processes. Docker image digests, configuration and archive lifecycle were inspected/tested separately. Manual screen-reader and actual browser-menu zoom assessments remain unverified. Narrowed CSS viewport reflow is verified; it is not presented as manual zoom evidence. Python result processing is bounded by the upload limit, not constant-memory streaming. Mainframe platforms were not executed.
 
 ## Delivery status
 
